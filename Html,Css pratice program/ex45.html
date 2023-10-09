@@ -1,0 +1,43 @@
+<!--
+input tag
+==> input tag used to create input elements/fields
+==> IE are used to accept data from the user (runtime/dynamic values)
+							user inputs
+==> its unpaired tag & inline tag
+
+types: text, password, hidden, number, reset, submit, image, email, url, date, time, checkbox, radio, file etc...
+Syn:		<input type="type of ele" .../>
+-->
+
+<!-- example on "input" field --> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Ex45</title>
+	<link rel="icon" href="man.png"/>
+   </head>
+  <body>
+	<h3>demo on text fields</h3>
+	<input type="text" autofocus/>
+	<!-- input attributes -->
+	<input type="text" size="50"/>
+	<br>
+	<input type="text" id="tb1" name="tf1"/>
+	<br>
+	<input type="text" id="tb2" name="tf2"  placeholder="enter username"/>
+	<br>
+	<!--		OR		-->
+	<label for="phone">enter contact number</label> <br>
+	<input type="text" id="phone" name="phone"/>
+	<br>
+	<input type="text" id="abc" name="abc" maxlength="3"/>
+	<br>
+	<input type="text" id="xyz" name="xyz" required/> <span>*</span>
+	<bR>
+	<input type="text" id="a" name="a"  value="1000"/>
+	<br>
+	<input type="text" id="b" name="b" value="mango" readonly/>
+	<br>
+	<input type="text" style="color:blue;"/>
+  </body>
+</html>

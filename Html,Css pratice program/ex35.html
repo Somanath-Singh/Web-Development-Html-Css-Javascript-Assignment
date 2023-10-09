@@ -1,0 +1,35 @@
+<!--
+id sel
+==> used to define/apply style for only 1 instance of specific html element(tag)
+==>  unique selector
+==> inline styles
+	Syn:		#id-name{										 
+							prop:val;
+							........							 
+						}				
+mapping
+==> every id selector should map(link) with some html element using "id" attribute
+	Syn:			<tag id="id-name">
+==> define no.of id selectors
+			1id : 1tag
+-->			 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Ex35</title>
+	<link rel="icon" href="man.png"/>
+	<style>
+		#id1{	color:red;	}
+		#id2{	color:blue;	}
+		#id3{	color:green;		} 
+	</style>
+  </head>
+  <body>
+		<h1>demo on id selector</h1>
+		<h2 id="id1">HTML</h2>
+		<h2 id="id2">CSS</h2>
+		<h2 id="id3">JavaScript</h2>
+		<h2 id="id1">BootStap</h2>	<!-- invalid -->
+		<h2 id="id1 id2">JQuery</h2>	<!-- invalid --> 
+  </body>
+</html>

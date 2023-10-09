@@ -1,0 +1,35 @@
+<!--
+class sel
+==> used to common define/apply styles for  group of instances of specific html element(tag)
+==> also used to common define/apply styles for different types of  html tags
+	Syn:		.class-name {										 
+							prop:val;
+							........							 
+						}							
+mapping
+==> every class selector should map(link) with some html element using "class" attribute
+	Syn:			<tag class="class-name">
+==> define no.of class selectors
+-->			 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Ex36</title>
+	<link rel="icon" href="man.png"/>
+	<style>
+		.c1{	background:cyan;	}
+		.c2{	background:pink;	}
+	</style>
+  </head>
+  <body>
+		<h1>demo on class selector</h1>
+		<h2 class="c1">HTML</h2>
+		<h2 class="c2">CSS</h2>
+		<h2 class="c1">JavaScript</h2>
+		<h2 class="c2">BootStap</h2>	
+		<h2 class="c1">JQuery</h2>	
+
+		<h1 class="c1">NO WARRANTY</h1>
+		<p class="c1">Editplus Is Sold "As Is" And Without Any Warranty As To Merchantability Or Fitness For A Particular Purpose Or Any Other Warranties Either Expressed Or Implied. The Author Will Not Be Liable For Data Loss, Damages, Loss Of Profits Or Any Other Kind Of Loss While Using Or Misusing This Software.</p>		
+  </body>
+</html>

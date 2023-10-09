@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        form{
+            width: 50%;
+            margin: auto;
+            background: rgb(54, 68, 62);
+            border-radius: 7px;
+        }
+        fieldset legend{
+            margin: auto;
+            color: blue;
+        }
+        fieldset{
+            border-radius: 7px;
+            border: 1px solid rgb(255, 47, 47);
+        }
+        input{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 12px;
+            border: 1px solid blue;
+            color: #000000;
+            background-color: rgb(254, 54, 54);
+        }
+        textarea{
+            width: 100%;
+            background-color: aquamarine;
+            color: blueviolet;
+            font-size: larger;
+        }
+        progress{
+            width: 100%;
+            color: lime;
+        }
+        aside{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <fieldset>
+        <legend>Basic information</legend>
+    <label for="a">First name:</label>
+    <input type="text" autofocus id="a">
+     <br>
+     <br>
+     <label for="b">Personal info:</label>
+     <input type="hidden" value="Somanath Singh" id="b">
+      <br>
+      <br>
+     <label for="c">Password:</label>
+     <input type="password" id="c">
+     <br>
+     <label for="d">Phone no:</label>
+     <input type="number" min="20" max="50" step="2" id="d">
+     <br>
+     <label for="e">Email:</label>
+     <input type="email" id="e">
+     <br>
+     <label for="f">url:</label>
+     <input type="url" id="f">
+     <br>
+     <label for="g">Date:</label>
+     <input type="date" id="g">
+     <br>
+     <label for="h">Time:</label>
+     <input type="time" id="h">
+     <br>
+     <label for="i">DateTime1:</label>
+     <input type="datetime" id="i">
+     <br>
+     <label for="j">DateTime2:</label>
+     <input type="datetime-local" id="j">
+     <br>
+     <label for="k">Month:</label>
+     <input type="month" id="k">
+     <br>
+     <label for="l">week:</label>
+     <input type="week">
+     <br>
+     <br>
+     <input type="reset">
+     <br>
+     <br>
+     <input type="submit" value="OK" post>
+     <br>
+     <br>
+     <input type="image" src="./images/asset 4.png" style="width: 77px; display:flex; margin: auto; border:2px solid black;">
+     <br>
+     <label for="m">Search:</label>
+     <input type="search" id="m">
+     <br>
+     <label for="n">Write something:</label>
+    <textarea name="" id="n" cols="30" rows="5"></textarea>
+    <br>
+    <label for="o">Progress bar</label>
+    <progress max="100%" min="67%"></progress>
+    </fieldset>
+    </form>
+    
+    <output>Hello somanath</output>
+
+    <aside>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero delectus distinctio obcaecati, eligendi fugiat adipisci at quos quisquam voluptate sunt aut sit ex neque rerum repudiandae suscipit aspernatur facilis quae!
+    Quibusdam excepturi quia suscipit totam ratione culpa enim itaque debitis, cumque dicta reiciendis sapiente eaque fugiat inventore consectetur quisquam aliquam quis porro. Cumque temporibus corporis similique quis eum maxime fugit?</aside>
+
+    <bdi>hello</bdi>
+</body>
+</html>

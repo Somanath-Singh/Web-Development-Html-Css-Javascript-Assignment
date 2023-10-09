@@ -1,0 +1,49 @@
+<!--
+CSS properties
+color ==> prop used to change the color of text/data of html tags (foreground)
+Syn:			color : color-spe;
+
+background-color ==> prop used to change the color html tag, but not data
+Syn:			background-color : color-spe;
+
+color specifications
+	we can spe the color in css different ways, those are:
+	==> named colors
+				we can write color names directly
+				ex:	red, green, blue, cyan...
+
+	==> hexadec colors
+				we can write color code in hexadecimal format
+				&#6digits		
+				ex:		&#000000			&#ffffff			&#c2c2c2
+							&#000
+
+	==> rgb colors
+			using rgb() function we can prepare own color shades
+			Syn:			rgb(red, green, blue)
+								every color range between 0 to 255
+								rgb(red, green, blue, alpha)
+												alpha => 0 to 1
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Ex13</title>
+	<link rel="icon" href="man.png"/>
+	<link rel="stylesheet" href="mystyles.css"/>  <!-- linking -->
+  </head>
+  <body style="background-color:yellow;">
+		<h3>demo on css colors</h3>
+		<!-- named colors -->
+		<h1 style="color:yellow; background-color:blue;">Hypertext Markup Language</h1>
+		<strong style="color:yellow; background-color:blue;">Cascading Style Sheets</strong>
+
+		<!-- hexadec colors -->
+		<h2 style="background-color:#123456; color:#abcdef;">JavaScript</h2>
+
+		<!-- rgb colors -->
+		<p style="background-color:rgb(30,17,27);color:rgb(190,180,215);">EditPlus is not free software. You may use this software for evaluation purposes without charge for a period of 30 days. If you use this software after the 30 day evaluation period, you must buy the license.</p>
+															<!--   1-0.4=> 0.6 = 60%   -->
+		<p style="background-color:rgb(140,110,190,0.6);">EDITPLUS IS SOLD "AS IS" AND WITHOUT ANY WARRANTY AS TO MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR ANY OTHER WARRANTIES EITHER EXPRESSED OR IMPLIED. THE AUTHOR WILL NOT BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE.</p>
+ </body>
+</html>
