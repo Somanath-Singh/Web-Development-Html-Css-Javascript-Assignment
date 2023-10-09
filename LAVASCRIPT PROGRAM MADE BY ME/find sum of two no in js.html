@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum</title>
+</head>
+<body>
+    <label for="a">First number:</label>
+    <input type="text" id="a"><br>
+    <label for="b">second number</label>
+    <input type="text" id="b"><br>
+    <button onclick="addition()">Addition</button>
+    <br>
+    <output id="op"></output>
+    <script>
+        function addition(){
+            let x,y,res;//local variable
+            x=parseFloat(a.value);
+            y=parseFloat(b.value);
+            res=x+y;
+            // document.write("sum is="+res);
+            // console.log("sum is="+res);
+            // alert("sum is="+res);
+            op.value="sum is="+res;
+        }
+    </script>
+</body>
+</html>

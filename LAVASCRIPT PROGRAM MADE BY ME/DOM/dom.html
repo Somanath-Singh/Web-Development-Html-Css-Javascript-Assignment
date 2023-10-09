@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Hello</h1>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sunt omnis iusto?</p>
+    <button id="get">click</button>
+
+    <hr>
+    <div class="con" align="center">
+        <h2>Somanath Singh</h2>
+        <input type="radio" name="color" id="red"><label>Red</label>
+        <input type="radio" name="color" id="green"><label>Green</label>
+        <input type="radio" name="color" id="blue"><label>Blue</label>
+    </div>
+
+    <!-- color picker -->
+    <div id="rem">
+        <label for="color">Select the color:</label>
+        <input type="color" id="color">
+    </div>
+
+    <hr>
+
+    <!-- //images -->
+    <img src="./img/asset 21.png" alt="" height="400px" width="600px">
+    <button id="button">change pic</button>
+
+    <hr>
+    <!-- demo on removing and adding element -->
+    <!-- removing -->
+    <button onclick="document.querySelector('#rem').remove()">Remove element</button>
+    <!-- adding element -->
+    <button id="add">Adding elements</button>
+    <hr id="hr">
+
+    <hr>
+   <div id="d1">
+    <h1>demo on image propertys</h1>
+    <img src="./img/lion-logo.avif" alt="">
+    <br>
+    <input type="radio" id="im1" name="imgproperty"><label for="im1">small</label>
+    <input type="radio" id="im2" name="imgproperty"><label for="im2">medium</label>
+    <input type="radio" id="im3" name="imgproperty"><label for="im3">large</label>
+   </div>
+
+    <hr>
+
+
+    <div id="col">
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+    </div>
+
+    <hr>
+<h3>demo no timer functions</h3>
+<h1 id="time" align="right"></h1>
+<script>
+    //displaying digital time
+    setInterval(function () {
+        let d = new Date();
+        document.querySelector("#time").innerText = d.toLocaleTimeString();
+    }, "1000");		 
+</script>
+    <script>
+            //getElementById
+            const ob1=document.getElementById("h1");
+            //document.write(`${ob1.innerText}<br>`);
+            ob1.innerText="fuck you";
+            ob1.style.color="red";
+            ob1.style.background="green";
+            ob1.style
+
+            const ob2=document.getElementById("p1");
+            ob2.innerText="Hello every one .";
+           // document.write(`${ob2.innerText}`);
+            ob2.style.color = "green";
+
+
+            //querySelector
+            const ob3=document.querySelector("p");
+            ob3.style.fontSize="45px";
+
+            const b=document.querySelector("#get");
+            b.style.background="red";
+
+            //event handling
+            b.onclick=function(){
+                alert(`${ob2.innerText}`+"hey, you get me");
+            }    
+            
+            //more example on dom event handling
+
+            const div=document.querySelector("h2");
+            
+            document.querySelector("#red").onchange=function(){
+                div.style.color="red";
+                div.style.background="black";
+            }
+            document.querySelector("#green").onchange = function () {
+                div.style.color = "green";
+                div.style.background = "black";
+            }
+            document.querySelector("#blue").onchange = function () {
+                div.style.color = "blue";
+                div.style.background = "black";
+            }
+
+            //on body
+            const c=document.querySelector("#color");
+            // document.body.onchange=()=>{
+            //     document.body.style.background=c.value;
+            // }
+            c.onchange = () => {
+            document.body.style.background = c.value;
+                }
+
+
+                //images
+                const img=document.images[0];
+                img.style.border="1px solid red";
+                console.log(img.getAttribute("width"));
+                console.log(img.height);
+
+                const btn=document.querySelector("#button");
+                btn.style.background="green";
+                btn.onclick=function(){
+                    img.src = "./img/asset 40.png";
+                }
+
+                //adding elements
+                document.querySelector("#add").onclick=function(){
+                    const div=document.createElement("div");
+                    const h3 = document.createElement("h3");
+                    div.id="dele";
+                    div.style.width="150px";
+                    div.style.textAlign="center";
+                    div.style.background = "lime";
+                    h3.id = "hele";
+                    h3.innerText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sunt omnis iusto?";
+                    h3.style.color="white";
+                    //append h3 in between div
+                    div.appendChild(h3);
+                    //document.querySelector("#hr").appendChild(div);
+                    document.body.appendChild(div);
+                }
+
+
+                //image change property
+                document.querySelector("#d1").style.textAlign="center";
+                const img1=document.images[1];
+                document.querySelector("#im1").onclick=()=>{
+                    img1.style.width="100px";
+                    img1.style.height="100px";
+                }
+                 document.querySelector("#im2").onclick = () => {
+                        img1.style.width = "250px";
+                        img1.style.height = "250px";
+                    }
+                     document.querySelector("#im3").onclick = () => {
+                            img1.style.width = "500px";
+                            img1.style.height = "500px";
+                        }
+                     
+            //color changing using timer function
+            const col = document.querySelector("#col").style;
+            col.width="80wh";
+            col.height="100vh";
+            col.textAlign="center";
+            //start the color timerfunction
+            document.querySelector("#start").onclick=function(){
+                time=setInterval(function(){
+                    let c="#"+parseInt(Math.random()*1000000);
+                    col.background=c;
+                },"100");
+            }
+            //stop the timer function
+            document.querySelector("#stop").onclick = () => {
+                clearInterval(time);
+                }
+    </script>
+
+
+    <hr>
+
+    <!-- image slider -->
+    <div id="imgdiv">
+        <img src="./img/car1.jpg" alt="" id="corosol">
+    </div>
+
+    <script>
+        //image slider logic
+        //div
+        const imgdiv=document.querySelector("#imgdiv").style;
+        imgdiv.width="50%";
+        imgdiv.height="500px";
+        imgdiv.margin="auto";
+        imgdiv.border="2px solid pink";
+
+        //img property
+        const img3=document.images[2];
+
+        img3.style.width="100%";
+        img3.style.height="100%";
+
+        const imgarr=["car1.jpg","car2.jpg","car3.jpg","car4.jpg"];
+        let index=1;
+        //timer function
+       
+        setInterval(function(){
+            //image array is finish it repeat the loop
+             if (index === imgarr.length)
+                index = 0;
+            
+            img3.src="./img/"+imgarr[index];
+            index++;
+        },"300");
+    </script>
+
+
+
+    <!-- //form validation -->
+    <div style="width: 220px;margin: auto;" align="center">
+        <form action="submit.html" id="frm">
+            <fieldset>
+                <legend>Basic information</legend>
+        
+                <label for="fn">First Name:</label><br>
+                <input type="text" id="fn" required><span id="sp1"></span> <br>
+                <label for="ln">last Name:</label><br>
+                <input type="text" id="ln" required><span id="sp2"></span><br>
+                <label for="cn">Contact No:</label><br>
+                <input type="text" id="cn" maxlength="10" required><span id="sp3"></span><br>
+                <label for="eid">Email Id:</label><br>
+                <input type="email" id="eid" required><span id="sp4"></span><br>
+                <label for="pws">Set Password:</label><br>
+                <input type="password" id="pws" required><span id="sp5"></span><br>
+                <label for="cpws">Conform Password</label><br>
+                <input type="password" id="cpws" required><span id="sp6"></span><br>
+                <input type="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        //first name
+        const fn=document.querySelector("#fn");
+        const sp1 = document.querySelector("#sp1");
+        fn.onkeypress=function(fna){
+            let ch1=fna.which;
+            console.log(ch1);
+            if(!((ch1>=65&&ch1<=90) || (ch1>=97&&ch1<=122) || (ch1==32))){
+                sp1.innerText="Please enter only character .";
+                sp1.style.color="red";
+                fn.style.color="red";
+                fna.preventDefault();
+            }
+            else{
+                sp1.innerText = "";
+                fn.style.color = "black";
+            }
+        }
+        //last name
+        const ln = document.querySelector("#ln");
+         const sp2 = document.querySelector("#sp2");
+            ln.onkeypress = function (lna) {
+                let ch2 = lna.which;
+                console.log(ch2);
+                if (!((ch2 >= 65 && ch2 <= 90) || (ch2 >= 97 && ch2 <= 122) || (ch2 == 32))) {
+                    sp2.innerText = "Please enter only character .";
+                    sp2.style.color = "red";
+                    ln.style.color = "red";
+                    lna.preventDefault();
+                }
+                 else {
+                    sp2.innerText = "";
+                    ln.style.color = "black";
+                }
+            }
+         //contact no
+            const cn = document.querySelector("#cn");
+             const sp3 = document.querySelector("#sp3");
+            cn.onkeypress = function (cna) {
+                let ch3 = cna.which;
+                console.log(ch3);
+                if (!(ch3 >= 48 && ch3 <= 57)) {
+                     sp3.innerText = "Please enter only number .";
+                    sp3.style.color = "red";
+                    cn.style.color = "red";
+                    cna.preventDefault();
+                }
+                 else {
+                    sp3.innerText = "";
+                    cn.style.color = "black";
+                }
+            }
+        
+            //password
+            const sp5 = document.querySelector("#sp5");
+            const sp6 = document.querySelector("#sp6");
+            document.forms[0].onsubmit=function(frm){
+                 const pws = document.querySelector("#pws");
+                 let ch,upper=false,lower=false,dig=false,sym=false;
+                 let pw=pws.value;
+                 for(let i=0;i<pw.length;i++){
+                    ch=pw[i];
+                     if (ch >= '0' && ch <= '9')
+                         dig = true;
+                     else if (ch >= 'A' && ch <= 'Z')
+                         upper = true;
+                     else if (ch >= 'a' && ch <= 'z')
+                         lower = true;
+                     else
+                         sym = true;
+                 }
+
+                 if(upper===false || lower===false || dig===false || sym===false ||pw.length<8){
+                    sp5.innerText="please set valid password ";
+                    sp5.style.color="red";
+                    pws.style.border="1px solid red";
+                    frm.preventDefault();
+                 }
+
+                //conform password
+                const cpws = document.querySelector("#cpws");
+                let cpw = cpws.value;
+                if (!(pw === cpw)) {
+                    sp6.innerText = "password should be match. ";
+                    sp6.style.color = "red";
+                    cpws.style.border = "1px solid red";
+                    frm.preventDefault();
+                }
+
+            //phone number
+            const cn = document.querySelector("#cn");
+             let contactno = cn.value;
+             if((contactno.length<10)){
+                 sp3.innerText = "phone no should be ten digit no.";
+                 sp3.style.color = "red";
+                 cn.style.border = "1px solid red";
+                 frm.preventDefault();
+             }
+
+             
+            }
+
+            // form validation end
+               
+    </script>
+</body>
+</html>

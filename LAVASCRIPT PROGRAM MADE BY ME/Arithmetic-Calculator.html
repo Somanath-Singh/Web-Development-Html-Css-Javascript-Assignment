@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-image: linear-gradient(to bottom,rgb(202, 66, 89),rgba(234, 255, 0, 0.856));
+            height: 100vh;
+        }
+        div{
+            margin: auto;
+            width: 326px;
+            background: rgb(32, 151, 191);
+            text-align: center;
+            border-radius: 12px;
+            padding: 12px;
+            margin-top: 10%;
+        }
+        div:hover{
+            box-shadow: 1px 1px 15px rgb(0, 0, 0);
+        }
+        h2{
+            color: white;
+        }
+        input{
+            width: 80%;
+            height: 30px;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            background:rgb(32, 151, 191);
+            border-bottom: 2px solid rgb(0, 254, 72);
+            color: rgb(245, 0, 0);
+            font-weight: 600;
+        }
+        button{
+            background-image: linear-gradient(to bottom,rgb(66, 71, 202),rgba(0, 255, 106, 0.856));
+            border: none;
+            border-radius: 12px;
+            padding: 5px;
+            font-size: larger;
+            font-weight: 800;
+        }
+        .fa-solid{
+            color: rgb(255, 255, 255);
+        }
+        .fa-solid1{
+            color: rgb(255, 255, 255);
+            font-size: larger;
+            font-weight: 900;
+        }
+        button:hover{
+            box-shadow: 1px 0 15px rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Arithmetic Calculator</h2>
+        <p><input type="text" id="firstval" placeholder="Enter First Number"></p>
+        <p><input type="text" id="secondval" placeholder="Enter Second Number"></p>
+        <p><input type="text" id="result" readonly placeholder="Result"></p>
+        <button onclick="result.value=parseFloat(firstval.value)+parseFloat(secondval.value)"><i class="fa-solid fa-plus"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="result.value=parseFloat(firstval.value)-parseFloat(secondval.value)"><i class="fa-solid fa-minus"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="result.value=parseFloat(firstval.value)*parseFloat(secondval.value)"><i class="fa-sharp fa-solid fa-star-of-life"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="result.value=parseFloat(firstval.value)/parseFloat(secondval.value)"><i class="fa-solid fa-divide"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="result.value=parseFloat(firstval.value)%parseFloat(secondval.value)"><i class="fa-solid fa-percent"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button onclick="result.value=parseFloat(firstval.value)**parseFloat(secondval.value)" class="fa-solid1">^</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
+    <script src="https://kit.fontawesome.com/5eb391e4c9.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fun1()">Click to see o/p</button>
+    <br>
+    <script>
+        document.writeln("hello somanath");
+        console.log("hello");
+        //working with variables
+        var st="Hello how are you";
+        document.writeln("<br>st=",st);
+        //different ways we can declare js variables
+        num1=4;//implicit declaration
+        document.writeln("<br>num1=",num1);
+        var num2=4.5;
+        document.writeln("<br>num2=",num2);
+        let num3=8.6;
+        document.writeln("<br>num3=",num3);
+        const num4=true;
+        document.writeln("<br>num4=",num4);
+        //typeof function
+        document.writeln("<br>",typeof num1);
+        //local or global variable
+        var val1=43;//global variable
+        function fun1(){
+            var val2="some text";//local variable
+            document.writeln("<br>",val1);//it didn't show any message because fun not been used
+            window.alert("val2=",val2);
+        }
+        document.writeln("<br>val1=",val1);
+        
+        //let Vs var
+        var a=4;
+        document.writeln("<br>a=",window.a);
+        //or
+        window.a;
+        a=6;//re assign
+        document.writeln("<br>a=",a);
+        let b=7;
+        document.writeln("<br>b=",b);
+        b=8;
+        document.writeln("<br>b=",b);
+        //non primitive datatype(objects)
+        var st2=new String("one");
+        document.writeln("<br>st2=",st2);
+        //array
+        document.write("<br>")
+        var a1=[10,20,30,40,50];
+        document.write("array=",a1)
+        //js dialog boxes
+        
+        function myalert()
+        {
+         window.alert("There is a bug in your laptop.");
+         alert("bug is fixed");
+        }
+        document.write("<br>");
+        //conform box
+        function myconform(){
+           var ab=window.confirm("ok or cancle:");
+            alert("you choose:"+ab);
+            confirm("you choose:"+ab);
+        }
+        var choose=window.confirm("click or cancle.");
+        alert("selected option:"+choose);
+        if(choose==true){
+            document.writeln("you select ok.");
+        }
+        else
+        {
+            document.writeln("you select cancle.")
+        }
+        //prompt box
+        var n1=prompt("Enter number one");
+        var n2=prompt("Enter number two");
+        var res=parseFloat(n1)+parseFloat(n2);
+        document.write("<br> sum is=",res);
+       
+</script>
+<br>
+<button onclick="myalert()">click to see alert effect</button>
+<br>
+<button onclick="myconform()">click to see conform dailog effect</button>
+
+</body>
+</html>
